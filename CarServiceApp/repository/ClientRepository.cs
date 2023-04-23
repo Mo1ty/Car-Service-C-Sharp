@@ -1,4 +1,5 @@
 ﻿using CarServiceApp.EFCore;
+using CarServiceApp.repository.common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,24 +8,9 @@ using System.Threading.Tasks;
 
 namespace CarServiceApp.repository
 {
-    internal class ClientRepository
+    internal class ClientRepository : GenericRepository<Client>
     {
         public Client addClient(Client client)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool existsById(Guid Id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Client> findAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Client findById(Guid Id)
         {
             throw new NotImplementedException();
         }

@@ -50,7 +50,7 @@ namespace CarServiceApp.repository
             if (addresses.Count == 1)
                 return addresses[0];
             else if (addresses.Count > 1)
-                throw new Exception("Multiple elements with this ID found in the database!");
+                throw new Exception("Multiple addresses with this ID found in the database!");
             return null;
         }
 

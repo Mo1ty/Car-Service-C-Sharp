@@ -1,4 +1,5 @@
 ﻿using CarServiceApp.EFCore;
+using CarServiceApp.EFCore.common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CarServiceApp.EFCore
 {
-    internal class Car
+    internal class Car : IEntity
     {
         public Guid Id { get; set; }
         public string Brand { get; set; }

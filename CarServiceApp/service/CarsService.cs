@@ -1,5 +1,4 @@
 ﻿using CarServiceApp.EFCore;
-using CarServiceApp.repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,11 +7,10 @@ using System.Threading.Tasks;
 
 namespace CarServiceApp.service
 {
-    internal interface AddressService
+    internal interface CarsService
     {
-        Address findById(Guid Id);
-        List<Address> findAll();
-        Address addAddress(Address address);
-
+        Car findById(Guid Id);
+        List<Car> findAll();
+        Car addCar(Car car);
     }
 }
