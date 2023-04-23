@@ -18,6 +18,6 @@ namespace CarServiceApp.EFCore
         public bool TestDriveable { get; set; }
 
         public Guid ConditionId { get; set; }
-        public Condition Condition { get; set; }
+        public virtual Condition Condition { get; set; }
     }
 }

@@ -13,6 +13,5 @@ namespace CarServiceApp.EFCore
         public string Street { get; set; }
         public string HouseNumber { get; set; } // String is used in case you need to write the building (3k2, 2B etc.).
         public string PostalCode { get; set; }
-
     }
 }

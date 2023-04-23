@@ -11,10 +11,10 @@ namespace CarServiceApp.EFCore
         public Guid Id { get; set; }
 
         public Guid ClientId { get; set; }
-        public Client Client { get; set; }
+        public virtual Client Client { get; set; }
 
         public Guid CarId { get; set; }
-        public Car Car { get; set; }
+        public virtual Car Car { get; set; }
 
         public DateTime DealDateTime { get; set; }
         public long PaymentAccount { get; set; }

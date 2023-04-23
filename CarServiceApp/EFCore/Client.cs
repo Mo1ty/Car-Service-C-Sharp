@@ -16,6 +16,6 @@ namespace CarServiceApp.EFCore
         public string DriverLicense { get; set; }
 
         public Guid AddressId { get; set; }
-        public Address Address { get; set; }
+        public virtual Address Address { get; set; }
     }
 }
