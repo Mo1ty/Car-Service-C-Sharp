@@ -1,7 +1,10 @@
 ﻿using CarServiceApp.EFCore;
+using CarServiceApp.Pages;
+
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +18,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
+
 namespace CarServiceApp
 {
     /// <summary>
@@ -22,8 +27,10 @@ namespace CarServiceApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Page> Pagelist;
         private bool _isContextMigrated = false;
         CarServiceContext context = new CarServiceContext();
+        
 
         private void MigrateContext()
         {
@@ -38,6 +45,35 @@ namespace CarServiceApp
                 MigrateContext();
             }
             InitializeComponent();
+            this.Pagelist = new List<Page>();
+            Pagelist.Add(new HPage());
+            Pagelist.Add(new CstPage());
         }
-    }
+        
+        private void Close_app(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Collapse_app(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void Home_Click(object sender, RoutedEventArgs e)
+        {
+            ManeFrame.Content = Pagelist[0];
+        }
+
+        private void Customers_Click(object sender, RoutedEventArgs e)
+        {
+            ManeFrame.Content = Pagelist[1];
+        }
+        
+    }   
+
 }
