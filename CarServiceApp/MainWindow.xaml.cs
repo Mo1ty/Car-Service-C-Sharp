@@ -1,5 +1,7 @@
 ﻿using CarServiceApp.EFCore;
+using CarServiceApp.EFCore.Context;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +25,7 @@ namespace CarServiceApp
     public partial class MainWindow : Window
     {
         private bool _isContextMigrated = false;
-        CarServiceContext context = new CarServiceContext();
+        private CarServiceContext context = ContextConfiguration.Context;
 
         private void MigrateContext()
         {
