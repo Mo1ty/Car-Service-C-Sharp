@@ -10,33 +10,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace CarServiceApp.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для CarAddInfo.xaml
+    /// Interaction logic for dealPage.xaml
     /// </summary>
-    public partial class CarAddInfo : Window
+    public partial class dealPage : Page
     {
-        public CarAddInfo()
+        public dealPage()
         {
             InitializeComponent();
         }
-        private void Close_app(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
 
-        private void Collapse_app(object sender, RoutedEventArgs e)
+        private void Add_Customer(object sender, RoutedEventArgs e)
         {
-            this.WindowState = WindowState.Minimized;
+            CreateDeal createDeal = new CreateDeal();
+            createDeal.ShowDialog();
         }
-        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            DragMove();
-        }
-
-
     }
 }

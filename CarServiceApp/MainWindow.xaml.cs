@@ -44,6 +44,7 @@ namespace CarServiceApp
             this.Pagelist = new List<Page>();
             Pagelist.Add(new HPage());
             Pagelist.Add(new CstPage());
+            Pagelist.Add(new dealPage());
         }
         private void Close_app(object sender, RoutedEventArgs e)
         {
@@ -67,6 +68,11 @@ namespace CarServiceApp
         private void Customers_Click(object sender, RoutedEventArgs e)
         {
             ManeFrame.Content = Pagelist[1];
+        }
+
+        private void Deals_Click(object sender, RoutedEventArgs e)
+        {
+            ManeFrame.Content = Pagelist[2];
         }
     }
 }

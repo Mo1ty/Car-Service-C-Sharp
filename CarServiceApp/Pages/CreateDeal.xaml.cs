@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace CarServiceApp.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для CarAddInfo.xaml
+    /// Interaction logic for CreateDeal.xaml
     /// </summary>
-    public partial class CarAddInfo : Window
+    public partial class CreateDeal : Window
     {
-        public CarAddInfo()
+        public CreateDeal()
         {
             InitializeComponent();
         }
@@ -36,7 +36,5 @@ namespace CarServiceApp.Pages
         {
             DragMove();
         }
-
-
     }
 }
