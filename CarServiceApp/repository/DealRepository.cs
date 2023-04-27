@@ -8,7 +8,5 @@ using System.Threading.Tasks;
 
 namespace CarServiceApp.repository
 {
-    internal class DealRepository : GenericRepository<Deal>
-    {
-    }
+    internal class DealRepository : GenericRepository<Deal>{}
 }

@@ -1,7 +1,9 @@
 ﻿using CarServiceApp.EFCore;
+using CarServiceApp.repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,21 +11,21 @@ namespace CarServiceApp.service.impl
 {
     internal class AddressServiceImpl : AddressService
     {
+        AddressRepository addressRepository = new AddressRepository();
 
-
-        public Address addAddress(Address address)
+        public void addAddress(Address address)
         {
-            throw new NotImplementedException();
+            addressRepository.addEntity<Address>(address);
         }
 
         public List<Address> findAll()
         {
-            throw new NotImplementedException();
+            return addressRepository.findAll<Address>();
         }
 
         public Address findById(Guid Id)
         {
-            throw new NotImplementedException();
+            return addressRepository.findById<Address>(Id);
         }
     }
 }

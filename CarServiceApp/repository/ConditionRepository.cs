@@ -8,11 +8,5 @@ using System.Threading.Tasks;
 
 namespace CarServiceApp.repository
 {
-    internal class ConditionRepository : GenericRepository<Condition>
-    {
-        public Address addCondition(Condition condition)
-        {
-            throw new NotImplementedException();
-        }
-    }
+    internal class ConditionRepository : GenericRepository<Condition>{}
 }

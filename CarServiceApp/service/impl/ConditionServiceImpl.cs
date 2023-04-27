@@ -1,4 +1,5 @@
 ﻿using CarServiceApp.EFCore;
+using CarServiceApp.repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,19 +10,21 @@ namespace CarServiceApp.service.impl
 {
     internal class ConditionServiceImpl : ConditionService
     {
-        public Condition addCar(Condition condition)
+        ConditionRepository conditionRepository = new ConditionRepository();
+
+        public void addCondition(Condition condition)
         {
-            throw new NotImplementedException();
+            conditionRepository.addEntity(condition);
         }
 
         public List<Condition> findAll()
         {
-            throw new NotImplementedException();
+            return conditionRepository.findAll<Condition>();
         }
 
         public Condition findById(Guid Id)
         {
-            throw new NotImplementedException();
+            return conditionRepository.findById<Condition>(Id);
         }
     }
 }

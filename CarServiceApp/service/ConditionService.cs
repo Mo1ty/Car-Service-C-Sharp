@@ -11,6 +11,6 @@ namespace CarServiceApp.service
     {
         Condition findById(Guid Id);
         List<Condition> findAll();
-        Condition addCar(Condition condition);
+        void addCondition(Condition condition);
     }
 }

@@ -11,6 +11,6 @@ namespace CarServiceApp.service
     {
         Client findById(Guid Id);
         List<Client> findAll();
-        Client addCar(Client client);
+        void addClient(Client client);
     }
 }
