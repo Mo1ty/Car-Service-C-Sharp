@@ -27,8 +27,8 @@ namespace CarServiceApp.Pages
 
         private void Add_Car(object sender, RoutedEventArgs e)
         {
-            CarAddInfo addCustomerInfoWindow = new CarAddInfo();
-            addCustomerInfoWindow.ShowDialog();
+            CarAddInfo addCarInfoWindow = new CarAddInfo();
+            addCarInfoWindow.ShowDialog();
         }
     }
 }

@@ -1,17 +1,17 @@
-﻿<Window x:Class="CarServiceApp.Pages.CarAddInfo"
+﻿<Window x:Class="CarServiceApp.Pages.CreateDeal"
+        xmlns:xtk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CarServiceApp.Pages"
-        xmlns:xtk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
-        Title="CarAddInfo" Height="450" Width="600"
-    WindowStyle="None" 
+        Height="450" Width="600"
+        Title="CreateDeal" 
+     WindowStyle="None" 
         AllowsTransparency="True"
         Background="Transparent"
         ResizeMode="NoResize">
-
     <Window.Resources>
         <Style TargetType="{x:Type Button}">
             <Setter Property="Background" Value="#3F51B5"/>
@@ -115,20 +115,13 @@
             <Button Content="*" Margin="564,4,18,3" HorizontalContentAlignment="Center" Click="Close_app"/>
             <Button Content="-" Margin="541,4,41,3" HorizontalContentAlignment="Center" Click="Collapse_app"/>
 
-            <xtk:WatermarkTextBox Watermark="Brand" Margin="30,56,389,331" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
-            <xtk:WatermarkTextBox Watermark="Model" Margin="30,114,389,273" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
-            <xtk:WatermarkTextBox Watermark="Identification Number" Margin="346,56,72,331" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
-            <xtk:WatermarkTextBox Watermark="Car Number" Margin="30,175,389,212" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
-            <xtk:WatermarkTextBox Watermark="Production Time" Margin="346,175,72,212" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
-            <Button Content="Yes" HorizontalAlignment="Left" Margin="473,273,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="55"/>
-            <Button Content="No" HorizontalAlignment="Left" Margin="472,233,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="56" />
-            <Button Style="{StaticResource ButtonStyleWithRoundedCorners}" Content="Test Driveable" HorizontalAlignment="Left" Margin="358,247,0,0" Grid.Row="1" VerticalAlignment="Top" Height="40" Width="100"/>
-            <Button Style="{StaticResource ButtonStyleWithRoundedCorners}" Content="Condition" HorizontalAlignment="Left" Margin="30,248,0,0" Grid.Row="1" VerticalAlignment="Top" Height="40" Width="167"/>
-            <Button Content="Perfect" HorizontalAlignment="Left" Margin="155,304,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="56"/>
-            <Button Content="Good" HorizontalAlignment="Left" Margin="86,304,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="56"/>
-            <Button Content="Bad" HorizontalAlignment="Left" Margin="10,304,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="56"/>
-            <Button Content="Add new car" HorizontalAlignment="Left" Margin="400,361,0,0" Grid.Row="1" VerticalAlignment="Top" Height="41" Width="128"/>
-            <xtk:WatermarkTextBox Watermark="Description" Margin="30,348,389,39" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
+            <xtk:WatermarkTextBox Watermark="Client ID" Margin="44,56,375,331" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
+            <xtk:WatermarkTextBox Watermark="Car ID" Margin="374,56,46,331" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38" Text=""/>
+            <xtk:WatermarkTextBox Watermark="Deal Date Time" Margin="210,126,210,261" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
+            <xtk:WatermarkTextBox Watermark="Payment Account" Margin="210,175,209,212" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38" Text=""/>
+            <xtk:WatermarkTextBox Watermark="Payment Code" Margin="210,218,210,169" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38" Text=""/>
+
+            <Button Content="Add new Deal" HorizontalAlignment="Left" Margin="400,361,0,0" Grid.Row="1" VerticalAlignment="Top" Height="41" Width="128"/>
 
 
         </Grid>
