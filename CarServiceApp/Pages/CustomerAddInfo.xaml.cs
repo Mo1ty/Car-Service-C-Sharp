@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CarServiceApp.service;
+using CarServiceApp.service.impl;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +22,8 @@ namespace CarServiceApp.Pages
     /// </summary>
     public partial class CustomerAddInfo : Window
     {
+        private AddressService addressService = new AddressServiceImpl();
+
         public CustomerAddInfo()
         {
             InitializeComponent();

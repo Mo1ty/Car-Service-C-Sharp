@@ -11,6 +11,6 @@ namespace CarServiceApp.service
     {
         Deal findById(Guid Id);
         List<Deal> findAll();
-        Deal addCar(Client client);
+        void addDeal(Deal deal);
     }
 }

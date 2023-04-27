@@ -1,4 +1,5 @@
 ﻿using CarServiceApp.EFCore;
+using CarServiceApp.repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,19 +10,28 @@ namespace CarServiceApp.service.impl
 {
     internal class CarsServiceImpl : CarsService
     {
-        public Car addCar(Car car)
+        CarRepository carRepository = new CarRepository();
+        ConditionRepository conditionRepository = new ConditionRepository();
+
+        public void addCar(Car car)
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (!conditionRepository.existsById<Condition>(car.ConditionId))
+                    throw new ArgumentException("Attempt to add a car failed due to non-existent condition identifier!");
+            }
+            catch { throw; }
+            carRepository.addEntity<Car>(car);
         }
 
         public List<Car> findAll()
         {
-            throw new NotImplementedException();
+            return carRepository.findAll<Car>();
         }
 
         public Car findById(Guid Id)
         {
-            throw new NotImplementedException();
+            return carRepository.findById<Car>(Id);
         }
     }
 }

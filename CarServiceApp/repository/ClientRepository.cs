@@ -8,11 +8,5 @@ using System.Threading.Tasks;
 
 namespace CarServiceApp.repository
 {
-    internal class ClientRepository : GenericRepository<Client>
-    {
-        public Client addClient(Client client)
-        {
-            throw new NotImplementedException();
-        }
-    }
+    internal class ClientRepository : GenericRepository<Client> {}
 }

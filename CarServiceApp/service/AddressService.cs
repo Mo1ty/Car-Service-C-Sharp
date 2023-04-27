@@ -12,7 +12,7 @@ namespace CarServiceApp.service
     {
         Address findById(Guid Id);
         List<Address> findAll();
-        Address addAddress(Address address);
+        void addAddress(Address address);
 
     }
 }

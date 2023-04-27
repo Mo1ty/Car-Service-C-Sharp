@@ -9,9 +9,22 @@ using System.Threading.Tasks;
 
 namespace CarServiceApp.repository.common
 {
-    internal class GenericRepository<TEntity>
+    internal abstract class GenericRepository<TEntity>
     {
         private CarServiceContext context = ContextConfiguration.Context;
+
+        public void addEntity<TEntity>(TEntity tEntity) where TEntity : class, IEntity
+        {
+            try
+            {
+                context.Set<TEntity>().Add(tEntity);
+                context.SaveChanges();
+            }
+            catch
+            {
+                throw;
+            }
+        }
 
         public List<TEntity> findAll<TEntity>() where TEntity : class, IEntity
         {
