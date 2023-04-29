@@ -1,8 +1,10 @@
 ﻿using CarServiceApp.EFCore;
 using CarServiceApp.EFCore.Context;
 using CarServiceApp.Pages;
+using CarServiceApp.test;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +29,7 @@ namespace CarServiceApp
     {
         private bool _isContextMigrated = false;
         private CarServiceContext context = ContextConfiguration.Context;
+        private Prototype testValues = new Prototype();
         List<Page> Pagelist;
         private void MigrateContext()
         {
@@ -40,6 +43,11 @@ namespace CarServiceApp
             {
                 MigrateContext();
             }
+            if(context.Conditions.IsNullOrEmpty())
+            {
+                testValues.addAll();
+            }
+
             InitializeComponent();
             this.Pagelist = new List<Page>();
             Pagelist.Add(new HPage());
