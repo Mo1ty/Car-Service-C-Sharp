@@ -11,7 +11,7 @@ namespace CarServiceApp.repository
 {
     internal class ClientRepository : GenericRepository<Client> {
 
-        public string exportToCSV()
+        public string exportToCSV(string Path)
         {
             var csv = new StringBuilder();
             List<Client> clients = findAll<Client>();
@@ -20,10 +20,10 @@ namespace CarServiceApp.repository
             {
                 var newLine = $"{client.Id},{client.Name},{client.Surname},{client.Email},{client.BirthDate},{client.DriverLicense}," +
                     $"{client.AddressId}";
-                csv.Append(newLine);
+                csv.AppendLine(newLine);
             }
-
-            string filepath = "/client.csv";
+            string name = $"\\client.csv";
+            string filepath = Path + name;
             File.WriteAllText(filepath, csv.ToString());
 
             return filepath;

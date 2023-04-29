@@ -37,9 +37,9 @@ namespace CarServiceApp.service.impl
             return clientRepository.findById<Client>(Id);
         }
 
-        public string exportCSV()
+        public string exportCSV(string Path)
         {
-            return clientRepository.exportToCSV();
+            return clientRepository.exportToCSV(Path);
         }
     }
 }

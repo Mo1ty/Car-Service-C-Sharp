@@ -54,7 +54,7 @@ namespace CarServiceApp.Pages
                         Model = car.Model,
                         IdentificationNumber = car.IdentificationNumber,
                         CarNumber = car.CarNumber,
-                        ProductionTime = car.ProductionTime,
+                        ProductionTime = car.ProductionTime.ToString("dd-MM-yyyy"),
                         TestDriveable = car.TestDriveable,
                         ConditionState = conditions.ConditionState,
                         Description = conditions.Description

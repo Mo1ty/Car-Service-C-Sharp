@@ -61,7 +61,7 @@ namespace CarServiceApp.Pages
                         {
                             Car = $"{car.Brand} {car.Model}",
                             Client= $"{dealClient.Client.Name} {dealClient.Client.Surname}",
-                            DealDateTime = dealClient.Deal.DealDateTime,
+                            DealDateTime = dealClient.Deal.DealDateTime.ToString("dd-MM-yyyy"),
                             PaymentAccount = dealClient.Deal.PaymentAccount,
                             PaymentCode = dealClient.Deal.PaymentCode
                         }

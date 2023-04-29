@@ -46,7 +46,17 @@
         </Grid.RowDefinitions>
 
         <Border Grid.Row="1" Grid.Column="0" Background="#374C61" CornerRadius="0,0,30,0" >
-            <DataGrid Name="CustomerDataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Foreground="White" Background="Transparent" AlternatingRowBackground="#374C61" RowBackground="#5161C1" CanUserAddRows="False" AutoGenerateColumns="True">
+            <DataGrid Name="CustomerDataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Foreground="White" Background="Transparent" AlternatingRowBackground="#374C61" RowBackground="#5161C1" CanUserAddRows="False" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Width="10" Binding="{Binding ID}" />
+                    <DataGridTextColumn Header="Full Name" Width="Auto" Binding="{Binding FullName}" />
+                    <DataGridTextColumn Header="Email" Width="Auto" Binding="{Binding Email}" />
+                    <DataGridTextColumn Header="Birth Date" Width="Auto" Binding="{Binding BirthDate}" />
+                    <DataGridTextColumn Header="Driver License" Width="Auto" Binding="{Binding DriverLicense}" />
+                    <DataGridTextColumn Header="Address" Width="Auto" Binding="{Binding Address}" />
+
+                    
+                </DataGrid.Columns>
                 <DataGrid.Resources>
                     <Style TargetType="{x:Type DataGridColumnHeader}">
                         <Setter Property="Background" Value="#242D64"/>
@@ -56,6 +66,7 @@
                     </Style>
                 </DataGrid.Resources>
             </DataGrid>
+
 
 
 

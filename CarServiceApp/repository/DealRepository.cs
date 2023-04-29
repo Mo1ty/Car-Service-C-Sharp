@@ -11,7 +11,7 @@ namespace CarServiceApp.repository
 {
     internal class DealRepository : GenericRepository<Deal>{
 
-        public string exportToCSV()
+        public string exportToCSV(string Path)
         {
             var csv = new StringBuilder();
             List<Deal> deals = findAll<Deal>();
@@ -19,10 +19,11 @@ namespace CarServiceApp.repository
             foreach (Deal deal in deals)
             {
                 var newLine = $"{deal.Id},{deal.ClientId},{deal.CarId},{deal.DealDateTime},{deal.PaymentAccount},{deal.PaymentCode}";
-                csv.Append(newLine);
+                csv.AppendLine(newLine);
             }
-
-            string filepath = "/car.csv";
+            string name = $"\\car.csv";
+            string filepath = Path + name;
+            
             File.WriteAllText(filepath, csv.ToString());
 
             return filepath;
