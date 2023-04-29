@@ -16,12 +16,14 @@ namespace CarServiceApp.service.impl
 
         public void addClient(Client client)
         {
+            
             try
             {
                 if (!addressRepository.existsById<Address>(client.AddressId))
                     throw new ArgumentException("Attempt to add a client failed due to non-existent address identifier!");
             }
             catch { throw; }
+            
             clientRepository.addEntity(client);
         }
 

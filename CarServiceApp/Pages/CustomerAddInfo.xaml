@@ -115,17 +115,19 @@
             <Button Content="*" Margin="564,4,18,3" HorizontalContentAlignment="Center" Click="Close_app"/>
             <Button Content="-" Margin="541,4,41,3" HorizontalContentAlignment="Center" Click="Collapse_app"/>
 
-            <xtk:WatermarkTextBox Watermark="Fitst Name" Margin="30,56,389,331" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
-            <xtk:WatermarkTextBox Watermark="Last Name" Margin="30,114,389,273" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
-            <xtk:WatermarkTextBox Watermark="Email" Margin="346,56,72,331" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
-            <xtk:WatermarkTextBox Watermark="Driver License" Margin="30,175,389,212" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
-            <xtk:WatermarkTextBox Watermark="City" Margin="347,169,72,218" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
-            <xtk:WatermarkTextBox Watermark="Street" Margin="346,212,72,174" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
-            <xtk:WatermarkTextBox Watermark="House" Margin="347,252,203,135" Grid.Row="1" TextWrapping="Wrap" Height="38"/>
-            <xtk:WatermarkTextBox Watermark="Postal Code" Margin="401,252,72,135" Grid.Row="1" TextWrapping="Wrap" Height="38"/>
+            <xtk:WatermarkTextBox Name="FirstName" Watermark="First Name" Margin="30,56,389,331" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
+            <xtk:WatermarkTextBox Name="LastName" Watermark="Last Name" Margin="30,114,389,273" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
+            <xtk:WatermarkTextBox Name="Email" Watermark="Email" Margin="346,56,72,331" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
+            <xtk:WatermarkTextBox Name="DriverLicense" Watermark="Driver License" Margin="30,231,389,156" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
+            <xtk:WatermarkTextBox Name="City" Watermark="City" Margin="347,169,72,218" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
+            <xtk:WatermarkTextBox Name="Street" Watermark="Street" Margin="346,212,72,174" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
+            <xtk:WatermarkTextBox Name="House" Watermark="House" Margin="347,252,203,135" Grid.Row="1" TextWrapping="Wrap" Height="38"/>
+            <xtk:WatermarkTextBox Name="PostalCode" Watermark="Postal Code" Margin="401,252,72,135" Grid.Row="1" TextWrapping="Wrap" Height="38"/>
+            <xtk:WatermarkTextBox Name="BirthDate" Watermark="Birth Date" Margin="30,175,389,212" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
+
             <Button Style="{StaticResource ButtonStyleWithRoundedCorners}" Content="Address" HorizontalAlignment="Left" Margin="325,127,0,0" Grid.Row="1" VerticalAlignment="Top" Height="40" Width="225"/>
 
-            <Button Content="Add new Customer" HorizontalAlignment="Left" Margin="400,361,0,0" Grid.Row="1" VerticalAlignment="Top" Height="41" Width="128"/>
+            <Button Content="Add new Customer" HorizontalAlignment="Left" Margin="400,361,0,0" Grid.Row="1" VerticalAlignment="Top" Height="41" Width="128" Click="Button_Add"/>
 
 
         </Grid>

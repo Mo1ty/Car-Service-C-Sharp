@@ -42,10 +42,26 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <Button Content="Refresh" HorizontalAlignment="Left" Margin="481,0,0,0" VerticalAlignment="Center" Height="30" Width="64" Click="Refresh_list"/>
 
         <Border Grid.Row="1" Grid.Column="0" Background="#374C61" CornerRadius="0,0,30,0"/>
         <Button Content="Add" HorizontalAlignment="Left" Margin="550,0,0,0" VerticalAlignment="Center" Height="30" Width="30" Click="Add_Customer"/>
+        <Border Grid.Row="1" Grid.Column="0" Background="#374C61" CornerRadius="0,0,30,0" >
+            <DataGrid Name="DealDataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Foreground="White" Background="Transparent" AlternatingRowBackground="#374C61" RowBackground="#5161C1" CanUserAddRows="False" AutoGenerateColumns="True">
+                <DataGrid.Resources>
+                    <Style TargetType="{x:Type DataGridColumnHeader}">
+                        <Setter Property="Background" Value="#242D64"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    </Style>
+                </DataGrid.Resources>
+            </DataGrid>
 
+
+
+
+        </Border>
 
 
     </Grid>

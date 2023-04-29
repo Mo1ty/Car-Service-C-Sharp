@@ -115,13 +115,13 @@
             <Button Content="*" Margin="564,4,18,3" HorizontalContentAlignment="Center" Click="Close_app"/>
             <Button Content="-" Margin="541,4,41,3" HorizontalContentAlignment="Center" Click="Collapse_app"/>
 
-            <xtk:WatermarkTextBox Watermark="Client ID" Margin="44,56,375,331" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
-            <xtk:WatermarkTextBox Watermark="Car ID" Margin="374,56,46,331" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38" Text=""/>
-            <xtk:WatermarkTextBox Watermark="Deal Date Time" Margin="210,126,210,261" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
-            <xtk:WatermarkTextBox Watermark="Payment Account" Margin="210,175,209,212" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38" Text=""/>
-            <xtk:WatermarkTextBox Watermark="Payment Code" Margin="210,218,210,169" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38" Text=""/>
+            <xtk:WatermarkTextBox Name="ClientId" Watermark="Client ID" Margin="44,56,375,331" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
+            <xtk:WatermarkTextBox Name="CarId" Watermark="Car ID" Margin="374,56,46,331" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38" Text=""/>
+            <xtk:WatermarkTextBox Name="DealDateTime" Watermark="Deal Date Time" Margin="210,126,210,261" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
+            <xtk:WatermarkTextBox Name="PaymentAccount" Watermark="Payment Account" Margin="210,175,209,212" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38" Text=""/>
+            <xtk:WatermarkTextBox Name="PaymentCode" Watermark="Payment Code" Margin="210,218,210,169" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38" Text=""/>
 
-            <Button Content="Add new Deal" HorizontalAlignment="Left" Margin="400,361,0,0" Grid.Row="1" VerticalAlignment="Top" Height="41" Width="128"/>
+            <Button Content="Add new Deal" HorizontalAlignment="Left" Margin="400,361,0,0" Grid.Row="1" VerticalAlignment="Top" Height="41" Width="128" Click="Button_Add"/>
 
 
         </Grid>
