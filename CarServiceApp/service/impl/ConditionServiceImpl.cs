@@ -26,5 +26,15 @@ namespace CarServiceApp.service.impl
         {
             return conditionRepository.findById<Condition>(Id);
         }
+
+        public string exportCSV()
+        {
+            return conditionRepository.exportToCSV();
+        }
+
+        public void importCSV(string filepath)
+        {
+            conditionRepository.importCSV(filepath);
+        }
     }
 }
