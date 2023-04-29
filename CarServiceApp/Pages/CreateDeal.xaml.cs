@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CarServiceApp.EFCore;
+using CarServiceApp.service;
+using CarServiceApp.service.impl;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +22,7 @@ namespace CarServiceApp.Pages
     /// </summary>
     public partial class CreateDeal : Window
     {
+        private DealService dealService = new DealServiceImpl();
         public CreateDeal()
         {
             InitializeComponent();
@@ -35,6 +39,29 @@ namespace CarServiceApp.Pages
         private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
+        }
+
+        private void Button_Add(object sender, RoutedEventArgs e)
+        {
+
+         
+
+            DateTime DT = string.IsNullOrEmpty(DealDateTime.Text) || !DealDateTime.Text.All(char.IsDigit) ? DateTime.Now: DateTime.Parse(DealDateTime.Text);
+                Deal deal = new Deal()
+            {
+                CarId = Guid.Parse(CarId.Text),
+                ClientId = Guid.Parse(ClientId.Text),/*
+                DealDateTime = DT,
+                PaymentAccount = long.Parse(PaymentAccount.Text),
+                PaymentCode = long.Parse(PaymentCode.Text)
+                */
+            }
+                ;
+            deal.DealDateTime = DT;
+            deal.PaymentAccount = long.Parse(PaymentAccount.Text);
+            deal.PaymentCode = long.Parse(PaymentCode.Text);
+
+            dealService.addDeal(deal);
         }
     }
 }

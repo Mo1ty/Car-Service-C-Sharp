@@ -115,20 +115,22 @@
             <Button Content="*" Margin="564,4,18,3" HorizontalContentAlignment="Center" Click="Close_app"/>
             <Button Content="-" Margin="541,4,41,3" HorizontalContentAlignment="Center" Click="Collapse_app"/>
 
-            <xtk:WatermarkTextBox Watermark="Brand" Margin="30,56,389,331" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
-            <xtk:WatermarkTextBox Watermark="Model" Margin="30,114,389,273" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
-            <xtk:WatermarkTextBox Watermark="Identification Number" Margin="346,56,72,331" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
-            <xtk:WatermarkTextBox Watermark="Car Number" Margin="30,175,389,212" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
-            <xtk:WatermarkTextBox Watermark="Production Time" Margin="346,175,72,212" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
-            <Button Content="Yes" HorizontalAlignment="Left" Margin="473,273,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="55"/>
-            <Button Content="No" HorizontalAlignment="Left" Margin="472,233,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="56" />
+            <xtk:WatermarkTextBox Name="Brand" Watermark="Brand" Margin="30,56,389,331" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
+            <xtk:WatermarkTextBox Name="Model" Watermark="Model" Margin="30,114,389,273" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
+            <xtk:WatermarkTextBox Name="IdentificationNumber" Watermark="Identification Number" Margin="346,56,72,331" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
+            <xtk:WatermarkTextBox Name="CarNumber" Watermark="Car Number" Margin="30,175,389,212" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
+            <xtk:WatermarkTextBox Name="ProductionTime" Watermark="Production Time" Margin="346,175,72,212" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
+
+            <Button Content="Yes" HorizontalAlignment="Left" Margin="473,273,0,0" Grid.Row="1" VerticalAlignment="Top" Height="28" Width="55" Click="TestDriveable_Yes"/>
+            <Button Content="No" HorizontalAlignment="Left" Margin="472,233,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="56" Click="TestDriveable_No" />
             <Button Style="{StaticResource ButtonStyleWithRoundedCorners}" Content="Test Driveable" HorizontalAlignment="Left" Margin="358,247,0,0" Grid.Row="1" VerticalAlignment="Top" Height="40" Width="100"/>
             <Button Style="{StaticResource ButtonStyleWithRoundedCorners}" Content="Condition" HorizontalAlignment="Left" Margin="30,248,0,0" Grid.Row="1" VerticalAlignment="Top" Height="40" Width="167"/>
-            <Button Content="Perfect" HorizontalAlignment="Left" Margin="155,304,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="56"/>
-            <Button Content="Good" HorizontalAlignment="Left" Margin="86,304,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="56"/>
-            <Button Content="Bad" HorizontalAlignment="Left" Margin="10,304,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="56"/>
-            <Button Content="Add new car" HorizontalAlignment="Left" Margin="400,361,0,0" Grid.Row="1" VerticalAlignment="Top" Height="41" Width="128"/>
-            <xtk:WatermarkTextBox Watermark="Description" Margin="30,348,389,39" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
+            <Button Content="Sold" HorizontalAlignment="Left" Margin="155,304,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="56" Click="CnStateSold"/>
+            <Button Content="Good" HorizontalAlignment="Left" Margin="86,304,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="56" Click="CnStateGood"/>
+            <Button Content="Bad" HorizontalAlignment="Left" Margin="10,304,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="56" Click="CnStateBad"/>
+            <Button Content="Add new car" HorizontalAlignment="Left" Margin="400,361,0,0" Grid.Row="1" VerticalAlignment="Top" Height="41" Width="128" Click="Button_Add"/>
+            <xtk:WatermarkTextBox Name="Description" Watermark="Description" Margin="30,348,389,39" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
+
 
 
         </Grid>

@@ -1,4 +1,5 @@
-﻿using CarServiceApp.service;
+﻿using CarServiceApp.EFCore;
+using CarServiceApp.service;
 using CarServiceApp.service.impl;
 using System;
 using System.Collections;
@@ -23,6 +24,7 @@ namespace CarServiceApp.Pages
     public partial class CustomerAddInfo : Window
     {
         private AddressService addressService = new AddressServiceImpl();
+        private ClientService clientService = new ClientServiceImpl();
 
         public CustomerAddInfo()
         {
@@ -40,6 +42,33 @@ namespace CarServiceApp.Pages
         private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
+        }
+
+        private void Button_Add(object sender, RoutedEventArgs e)
+        {
+            Address newAddress = new Address
+            {
+                City = City.Text,
+                Street = Street.Text,
+                HouseNumber = House.Text,
+                PostalCode = PostalCode.Text
+            };
+
+            addressService.addAddress(newAddress);
+            
+            Client newClient = new Client
+            {
+                Name = FirstName.Text,
+                Surname = LastName.Text,
+                Email = Email.Text,
+                BirthDate = DateTime.Parse(BirthDate.Text),
+                DriverLicense = DriverLicense.Text,
+                AddressId = newAddress.Id
+        };
+            clientService.addClient(newClient);
+
+            this.Close();
+
         }
     }
 }
