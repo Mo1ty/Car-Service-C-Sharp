@@ -14,7 +14,7 @@ namespace CarServiceApp.repository
 {
     internal class ConditionRepository : GenericRepository<Condition>{
 
-        public string exportToCSV()
+        public string exportToCSV(string Path)
         {
             var csv = new StringBuilder();
             List<Condition> conditions = findAll<Condition>();
@@ -22,10 +22,11 @@ namespace CarServiceApp.repository
             foreach (Condition condition in conditions)
             {
                 var newLine = $"{condition.Id},{condition.ConditionState},{condition.Description}";
-                csv.Append(newLine);
+                csv.AppendLine(newLine);
             }
-
-            string filepath = "/condition.csv";
+            string name = $"\\condition.csv";
+            string filepath = Path + name;
+            
             File.WriteAllText(filepath, csv.ToString());
 
             return filepath;

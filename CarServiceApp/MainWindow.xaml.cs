@@ -54,6 +54,7 @@ namespace CarServiceApp
             Pagelist.Add(new CstPage());
             Pagelist.Add(new dealPage());
             Pagelist.Add(new CSVPage());
+            Pagelist.Add(new about());
         }
         private void Close_app(object sender, RoutedEventArgs e)
         {
@@ -71,7 +72,7 @@ namespace CarServiceApp
 
         private void Home_Click(object sender, RoutedEventArgs e)
         {
-            ManeFrame.Content = Pagelist[0];
+            ManeFrame.Content = Pagelist[0]; 
         }
 
         private void Customers_Click(object sender, RoutedEventArgs e)
@@ -87,6 +88,11 @@ namespace CarServiceApp
         private void CSV_Click(object sender, RoutedEventArgs e)
         {
             ManeFrame.Content = Pagelist[3];
+        }
+
+        private void About(object sender, RoutedEventArgs e)
+        {
+            ManeFrame.Content = Pagelist[4];
         }
     }
 }

@@ -13,6 +13,6 @@ namespace CarServiceApp.service
         List<Car> findAll();
         void addCar(Car car);
 
-        string exportCSV();
+        string exportCSV(string Path);
     }
 }

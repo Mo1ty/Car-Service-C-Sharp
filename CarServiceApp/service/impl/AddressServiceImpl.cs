@@ -27,10 +27,11 @@ namespace CarServiceApp.service.impl
         {
             return addressRepository.findById<Address>(Id);
         }
-
-        public string exportCSV()
+        
+        public string exportCSV(string Path)
         {
-            return addressRepository.exportToCSV();
+            return addressRepository.exportToCSV(Path);
         }
+        
     }
 }

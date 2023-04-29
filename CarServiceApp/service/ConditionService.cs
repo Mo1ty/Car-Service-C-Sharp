@@ -13,6 +13,6 @@ namespace CarServiceApp.service
         List<Condition> findAll();
         void addCondition(Condition condition);
 
-        string exportCSV();
+        string exportCSV(string Path);
     }
 }

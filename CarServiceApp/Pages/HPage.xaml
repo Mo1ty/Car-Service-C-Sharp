@@ -44,9 +44,17 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
+                
         <Border Grid.Row="1" Grid.Column="0" Background="#374C61" CornerRadius="0,0,30,0" >
             <DataGrid Name="CarDataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Foreground="White" Background="Transparent" AlternatingRowBackground="#374C61" RowBackground="#5161C1" CanUserAddRows="False" AutoGenerateColumns="True">
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Width="10" Binding="{Binding ID}" />
+                        
+
+
+
+                    </DataGrid.Columns>
                 <DataGrid.Resources>
                     <Style TargetType="{x:Type DataGridColumnHeader}">
                         <Setter Property="Background" Value="#242D64"/>

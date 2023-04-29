@@ -63,7 +63,7 @@
             <Button Content="Deals" Height="50" Margin="10,110,10,249" Grid.Row="1" Click="Deals_Click"/>
             <Button Content="CSV" Height="50" Margin="10,299,10,76" Grid.Row="1" Click="CSV_Click"/>
 
-            <Button Content="About Program" Height="50" Margin="10,354,10,21" Grid.Row="1" />
+            <Button Content="About Program" Height="50" Margin="10,354,10,21" Grid.Row="1" Click="About" />
             <Button Content="*" Margin="564,4,18,3" Grid.Column="1" HorizontalContentAlignment="Center" Click="Close_app"/>
             <Button Content="-" Margin="535,4,47,3" Grid.Column="1" HorizontalContentAlignment="Center" Click="Collapse_app"/>
             <Frame Grid.Column="1" x:Name="ManeFrame" NavigationUIVisibility="Hidden" Grid.Row="1"/>

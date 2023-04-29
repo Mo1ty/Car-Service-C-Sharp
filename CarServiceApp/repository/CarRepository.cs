@@ -12,7 +12,7 @@ namespace CarServiceApp.repository
 {
     internal class CarRepository : GenericRepository<Car> {
 
-        public string exportToCSV()
+        public string exportToCSV(string Path)
         {
             var csv = new StringBuilder();
             List<Car> cars = findAll<Car>();
@@ -21,10 +21,11 @@ namespace CarServiceApp.repository
             {
                 var newLine = $"{car.Id},{car.Brand},{car.Model},{car.IdentificationNumber},{car.CarNumber},{car.ProductionTime}," +
                     $"{car.TestDriveable},{car.ConditionId}";
-                csv.Append(newLine);
+                csv.AppendLine(newLine);
             }
 
-            string filepath = "/car.csv";
+            string name = $"\\car.csv";
+            string filepath = Path + name;
             File.WriteAllText(filepath, csv.ToString());
 
             return filepath;

@@ -50,10 +50,11 @@ namespace CarServiceApp.Pages
                         ID = client.Id,
                         FullName = $"{client.Name} {client.Surname}",
                         Email = client.Email,
-                        BirthDate = client.BirthDate,
+                        BirthDate = client.BirthDate.ToString("dd-MM-yyyy"), 
                         DriverLicense = client.DriverLicense,
                         Address = $"{address.City} {address.Street} {address.HouseNumber} {address.PostalCode}",
                     }).ToList();
+
 
                 CustomerDataGrid.ItemsSource = completetable;
             }

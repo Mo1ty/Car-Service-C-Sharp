@@ -14,7 +14,7 @@ namespace CarServiceApp.repository
 {
     internal class AddressRepository : GenericRepository<Address> {
     
-        public string exportToCSV()
+        public string exportToCSV(string Path)
         {
             var csv = new StringBuilder();
             List<Address> addresses = findAll<Address>();
@@ -22,13 +22,15 @@ namespace CarServiceApp.repository
             foreach (Address address in addresses)
             {
                 var newLine = $"{address.Id},{address.City},{address.Street},{address.HouseNumber},{address.PostalCode}";
-                csv.Append(newLine);
+                csv.AppendLine(newLine);
             }
 
-            string filepath = "/address.csv";
+            string name = $"\\address.csv";
+            string filepath = Path + name;
             File.WriteAllText(filepath, csv.ToString());
 
             return filepath;
+            
         }
     
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarServiceApp.repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,11 @@ namespace CarServiceApp.Pages
     /// </summary>
     public partial class CSVPage : Page
     {
+        AddressRepository addressRepository = new AddressRepository();
+        CarRepository carRepository = new CarRepository();
+        ClientRepository clientRepository = new ClientRepository();
+        ConditionRepository conditionRepository = new ConditionRepository();
+        DealRepository dealRepository = new DealRepository();
         public CSVPage()
         {
             InitializeComponent();
@@ -27,12 +33,26 @@ namespace CarServiceApp.Pages
 
         private void ImportCSV(object sender, RoutedEventArgs e)
         {
-
+            conditionRepository.importCSV(Path.Text);
+            /*
+            addressRepository.importCSV(Path.Text);
+            carRepository.importCSV(Path.Text);
+            clientRepository.importCSV(Path.Text);
+            dealRepository.importCSV(Path.Text);
+            */
+            MessageBox.Show($"Data was imported from {Path.Text}");
         }
 
         private void ExportCSV(object sender, RoutedEventArgs e)
         {
-
+            
+            dealRepository.exportToCSV(Path.Text);
+            addressRepository.exportToCSV(Path.Text);
+            carRepository.exportToCSV(Path.Text);
+            clientRepository.exportToCSV(Path.Text);
+            conditionRepository.exportToCSV(Path.Text);
+            MessageBox.Show($"Data was exported to {Path.Text}");
         }
+
     }
 }
