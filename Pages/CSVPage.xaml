@@ -1,0 +1,63 @@
+﻿<Page x:Class="CarServiceApp.Pages.CSVPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CarServiceApp.Pages"
+      mc:Ignorable="d" 
+      
+      Title="CSVPage"
+      d:DesignHeight="425" d:DesignWidth="600"
+    
+        
+      >
+    <Page.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="#3F51B5"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#7D89D1"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            Margin="{TemplateBinding Padding}"
+                                            Content="{TemplateBinding Content}"
+                                            ContentTemplate="{TemplateBinding ContentTemplate}" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#374C61"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+    <Grid Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="1" Grid.Column="0" Background="#374C61" CornerRadius="0,0,30,0" >
+
+
+
+
+
+        </Border>
+        <Button Content="Import CSV" HorizontalAlignment="Left" Margin="86,130,0,0" VerticalAlignment="Top" Height="64" Width="126" Click="ImportCSV" Grid.Row="1"/>
+        <Button Content="Export CSV" HorizontalAlignment="Left" Margin="363,130,0,0" VerticalAlignment="Top" Height="64" Width="126" Click="ExportCSV" Grid.Row="1"/>
+
+
+
+    </Grid>
+
+</Page>
