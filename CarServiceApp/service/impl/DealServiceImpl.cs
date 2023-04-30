@@ -42,5 +42,10 @@ namespace CarServiceApp.service.impl
         {
             return dealRepository.exportToCSV(Path);
         }
+
+        public void importCSV(string Path)
+        {
+            dealRepository.importCSV(Path);
+        }
     }
 }

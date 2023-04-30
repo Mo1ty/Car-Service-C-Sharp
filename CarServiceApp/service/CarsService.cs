@@ -12,7 +12,7 @@ namespace CarServiceApp.service
         Car findById(Guid Id);
         List<Car> findAll();
         void addCar(Car car);
-
         string exportCSV(string Path);
+        void importCSV(string Path);
     }
 }

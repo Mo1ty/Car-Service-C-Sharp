@@ -34,12 +34,10 @@ namespace CarServiceApp.Pages
         private void ImportCSV(object sender, RoutedEventArgs e)
         {
             conditionRepository.importCSV(Path.Text);
-            /*
             addressRepository.importCSV(Path.Text);
             carRepository.importCSV(Path.Text);
             clientRepository.importCSV(Path.Text);
             dealRepository.importCSV(Path.Text);
-            */
             MessageBox.Show($"Data was imported from {Path.Text}");
         }
 

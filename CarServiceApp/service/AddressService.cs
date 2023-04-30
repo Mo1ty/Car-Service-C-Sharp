@@ -13,8 +13,8 @@ namespace CarServiceApp.service
         Address findById(Guid Id);
         List<Address> findAll();
         void addAddress(Address address);
-
         string exportCSV(string Path);
+        void importCSV(string Path);
 
     }
 }

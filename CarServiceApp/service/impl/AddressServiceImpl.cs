@@ -32,6 +32,11 @@ namespace CarServiceApp.service.impl
         {
             return addressRepository.exportToCSV(Path);
         }
+
+        public void importCSV(string Path)
+        {
+            addressRepository.importCSV(Path);
+        }
         
     }
 }

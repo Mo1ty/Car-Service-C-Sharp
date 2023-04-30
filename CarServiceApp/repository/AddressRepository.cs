@@ -1,8 +1,11 @@
 ﻿using CarServiceApp.EFCore;
 using CarServiceApp.EFCore.Context;
 using CarServiceApp.repository.common;
+using CsvHelper.Configuration;
+using CsvHelper;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -12,8 +15,9 @@ using System.Windows.Controls;
 
 namespace CarServiceApp.repository
 {
-    internal class AddressRepository : GenericRepository<Address> {
-    
+    internal class AddressRepository : GenericRepository<Address>
+    {
+
         public string exportToCSV(string Path)
         {
             var csv = new StringBuilder();
@@ -30,8 +34,34 @@ namespace CarServiceApp.repository
             File.WriteAllText(filepath, csv.ToString());
 
             return filepath;
-            
+
         }
-    
+
+        public void importCSV(string filepath)
+        {
+            var configuration = new CsvConfiguration(CultureInfo.InvariantCulture)
+            {
+                HasHeaderRecord = false,
+                Encoding = Encoding.UTF8,
+                Delimiter = ","
+            };
+            if (!File.Exists(filepath + "\\address.csv"))
+            {
+                return;
+            }
+            using (var reader = new StreamReader(filepath + "\\address.csv"))
+            {
+                using (var csvReader = new CsvReader(reader, configuration))
+                {
+                    var addresses = csvReader.GetRecords<Address>();
+                    foreach (Address address in addresses)
+                    {
+                        addEntity<Address>(address);
+                    }
+                }
+
+            }
+        }
+
     }
 }
