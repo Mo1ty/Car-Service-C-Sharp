@@ -12,7 +12,7 @@ namespace CarServiceApp.service
         Deal findById(Guid Id);
         List<Deal> findAll();
         void addDeal(Deal deal);
-
         string exportCSV(string Path);
+        void importCSV(string Path);
     }
 }

@@ -12,7 +12,7 @@ namespace CarServiceApp.service
         Client findById(Guid Id);
         List<Client> findAll();
         void addClient(Client client);
-
         string exportCSV(string Path);
+        void importCSV(string Path);
     }
 }

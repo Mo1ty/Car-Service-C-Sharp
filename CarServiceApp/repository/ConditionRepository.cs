@@ -28,6 +28,7 @@ namespace CarServiceApp.repository
             string filepath = Path + name;
             
             File.WriteAllText(filepath, csv.ToString());
+            
 
             return filepath;
         }
@@ -36,17 +37,25 @@ namespace CarServiceApp.repository
         {
             var configuration = new CsvConfiguration(CultureInfo.InvariantCulture)
             {
+                HasHeaderRecord = false,
                 Encoding = Encoding.UTF8,
                 Delimiter = ","
             };
-
-            using (var streamReader = new CsvReader(File.OpenText(filepath), configuration))
+            if (!File.Exists(filepath + "\\condition.csv"))
             {
-                var conditions = streamReader.GetRecords<Condition>();
-                foreach (Condition condition in conditions)
+                return;
+            }
+            using (var reader = new StreamReader(filepath + "\\condition.csv"))
+            {
+                using (var csvReader = new CsvReader(reader, configuration))
                 {
-                    addEntity<Condition>(condition);
+                    var conditions = csvReader.GetRecords<Condition>();
+                    foreach (Condition condition in conditions)
+                    {
+                        addEntity<Condition>(condition);
+                    }
                 }
+                
             }
         }
 

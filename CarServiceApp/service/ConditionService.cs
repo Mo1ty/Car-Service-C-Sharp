@@ -12,7 +12,7 @@ namespace CarServiceApp.service
         Condition findById(Guid Id);
         List<Condition> findAll();
         void addCondition(Condition condition);
-
         string exportCSV(string Path);
+        void importCSV(string Path);
     }
 }
