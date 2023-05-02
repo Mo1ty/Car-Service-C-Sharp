@@ -30,7 +30,7 @@ namespace CarServiceApp.Pages
         private void Add_Customer(object sender, RoutedEventArgs e)
         {
             CreateDeal createDeal = new CreateDeal();
-            createDeal.ShowDialog();
+            createDeal.Show();
         }
 
         private void Refresh_list(object sender, RoutedEventArgs e)

@@ -62,10 +62,12 @@ namespace CarServiceApp.Pages
                 PaymentCode.Text.All(char.IsDigit)
                 )
             {
+                string CRID = parse.Pars.parseIDNoCB(CarId.Text);
+                string CLID = parse.Pars.parseIDNoCB(ClientId.Text);
                 Deal deal = new Deal()
                 {
-                    CarId = Guid.Parse(CarId.Text),
-                    ClientId = Guid.Parse(ClientId.Text),
+                    CarId = Guid.Parse(CRID),
+                    ClientId = Guid.Parse(CLID),
                     DealDateTime = DT,
                     PaymentAccount = long.Parse(PaymentAccount.Text),
                     PaymentCode = long.Parse(PaymentCode.Text)

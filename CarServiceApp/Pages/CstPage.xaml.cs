@@ -27,6 +27,7 @@ namespace CarServiceApp.Pages
         {
             InitializeComponent();
             updatecustomerdadagrid();
+            
         }
 
         private void Add_Customer(object sender, RoutedEventArgs e)
@@ -65,6 +66,11 @@ namespace CarServiceApp.Pages
         private void Refresh_list(object sender, RoutedEventArgs e)
         {
             updatecustomerdadagrid();
+            parse.Pars.parseID();
+        }
+        private void ExecuteCopy(object sender, ExecutedRoutedEventArgs e)
+        {
+            parse.Pars.parseID();
         }
     }
 }

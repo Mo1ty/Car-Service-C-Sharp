@@ -116,8 +116,8 @@
             <Button Content="-" Margin="541,4,41,3" HorizontalContentAlignment="Center" Click="Collapse_app"/>
             <Label x:Name="BlinkingLabel" Visibility="Hidden" Foreground ="Aqua"  Content="Please fill in all the fields" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,381,0,0" Grid.Row="1" />
 
-            <xtk:WatermarkTextBox Name="ClientId" Watermark="Client ID" Margin="44,56,375,331" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
-            <xtk:WatermarkTextBox Name="CarId" Watermark="Car ID" Margin="374,56,46,331" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38" Text=""/>
+            <xtk:WatermarkTextBox Name="ClientId" Watermark="Client info" Margin="44,56,375,331" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
+            <xtk:WatermarkTextBox Name="CarId" Watermark="Car info" Margin="374,56,46,331" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38" Text=""/>
             <xtk:WatermarkTextBox Name="DealDateTime" Watermark="Deal Date Time" Margin="210,126,210,261" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38"/>
             <xtk:WatermarkTextBox Name="PaymentAccount" Watermark="Payment Account" Margin="210,175,209,212" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38" Text=""/>
             <xtk:WatermarkTextBox Name="PaymentCode" Watermark="Payment Code" Margin="210,218,210,169" Grid.Row="1" TextWrapping="Wrap"  Width="181" Height="38" Text=""/>
