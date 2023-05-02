@@ -86,6 +86,7 @@
 
         </Border>
         <xtk:WatermarkTextBox Name="Path" Watermark="Enter full path to Import/Export" Margin="140,25,140,312" Grid.Row="1" TextWrapping="Wrap" Height="38" Text=""/>
+        <Label x:Name="BlinkingLabel" Visibility="Hidden" Foreground ="Aqua"  Content="Please enter the full path" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="219,80,0,0" Grid.Row="1" />
 
         <Button Content="Import CSV" HorizontalAlignment="Left" Margin="86,130,0,0" VerticalAlignment="Top" Height="64" Width="126" Click="ImportCSV" Grid.Row="1"/>
         <Button Content="Export CSV" HorizontalAlignment="Left" Margin="363,130,0,0" VerticalAlignment="Top" Height="64" Width="126" Click="ExportCSV" Grid.Row="1"/>
